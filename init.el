@@ -100,13 +100,14 @@
                        ))
 (real-global-auto-complete-mode t)
 
-; comment/uncomment region
-;(define-key global-map (kbd "C-/") 'comment-region)
-;(define-key global-map (kbd "C-.") 'uncomment-region)
-
 ; multi-term
 (global-unset-key (kbd "C-x m"))
 (define-key global-map (kbd "C-x m") 'multi-term)
+(add-hook 'term-mode-hook 'linum-mode-off)
+
+(defun linum-mode-off ()
+  (interactive)
+  (linum-mode 0))
 
 ;;; ruby
 
