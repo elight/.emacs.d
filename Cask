@@ -14,4 +14,5 @@
 (depends-on "gist")
 (depends-on "grizzl")
 (depends-on "projectile")
+(depends-on "robe")
 (depends-on "zenburn-theme")

@@ -115,6 +115,8 @@
 ;;; ruby
 
 (add-hook 'ruby-mode-hook 'auto-complete-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
