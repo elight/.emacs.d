@@ -39,7 +39,7 @@ cask install
 
 *C-x p* brings up a file chooser
 
-*M-x projectile-invalidate-cache* invalidate Projectile's cache when you add or remove a file
+*C-u C-u C-x p* invalidates Projectile's cache and then brings up the file chooser. You'll want to do this after you delete or create a new file.
 
 ## [Multi-term](http://www.emacswiki.org/emacs/download/multi-term.el) (Thanks, Avdi!)
 
