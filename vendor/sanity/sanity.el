@@ -23,7 +23,7 @@
   (scroll-up 1))
 
 ;; compatibility:
-;;(global-set-key (kbd "M-g")      'goto-line)
+(global-set-key (kbd "M-g")      'goto-line)
 (global-set-key (kbd "<C-up>")   'rwd-previous-line-6)
 (global-set-key (kbd "<C-down>") 'rwd-forward-line-6)
 (global-set-key (kbd "<M-up>")   'rwd-scroll-up)
