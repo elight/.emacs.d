@@ -28,6 +28,37 @@
 ;;(require 'rails-dev-env)
 
 
+;; == window control =========================================================
+(global-set-key "\C-c=" 'v-resize)
+(global-set-key "\C-c}" 'h-resize)
+
+; Successive -/= or {/} shrink/enlarge windows vertically/horizontally
+
+(defun v-resize (key)
+  "interactively resize the window vertically"  
+  (interactive "cHit -/= to enlarge/shrink") 
+  (cond                                  
+   ((eq key (string-to-char "="))                      
+    (enlarge-window 1)             
+    (call-interactively 'v-resize)) 
+   ((eq key (string-to-char "-"))                      
+    (enlarge-window -1)            
+    (call-interactively 'v-resize)) 
+   (t (push key unread-command-events)))) 
+
+(defun h-resize (key)
+  "interactively resize the window horizontally"
+  (interactive "cHit {/} to enlarge/shrink") 
+  (cond                                  
+   ((eq key (string-to-char "}"))                      
+    (enlarge-window-horizontally 1)
+    (call-interactively 'h-resize)) 
+   ((eq key (string-to-char "{/}"))                      
+    (shrink-window-horizontally 1)
+    (call-interactively 'h-resize)) 
+   (t (push key unread-command-events)))) 
+
+
 ;; -- M-g g is annoying
  (global-set-key (kbd "C-x l") 'goto-line)
 
