@@ -82,10 +82,6 @@
 ;;; Hey, backspace, work right, dammit!
 (normal-erase-is-backspace-mode 0)
 
-;;; global mappings
-
-(windmove-default-keybindings)
-
 ; gist private/public
 (setq gist-view-gist t)
 (global-set-key (kbd "C-c g r") 'gist-region-or-buffer-private)
