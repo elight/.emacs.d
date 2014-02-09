@@ -95,6 +95,8 @@
 (add-to-list 'auto-mode-alist '("Guardfile$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . enh-ruby-mode))
 
+(setq enh-ruby-bounce-deep-indent 1)
+
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 ;; == themes =================================================================
