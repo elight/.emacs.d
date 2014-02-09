@@ -25,6 +25,8 @@
 
 (require 'sanity)
 
+(require 'lfe-mode)
+
 ;;(require 'rails-dev-env)
 
 
