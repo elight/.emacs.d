@@ -98,12 +98,15 @@
 
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
+
 ;; == themes =================================================================
 
 ;; It's in Cask now instead /themes. Yay!
 (load-theme 'zenburn t)
 
 ;; == projectile setup from http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/?utm_source=rubyweekly&utm_medium=email
+
+;; == projectile
 
 (require 'grizzl)
 (projectile-global-mode)
@@ -113,15 +116,20 @@
 (global-set-key (kbd "C-x b") 'projectile-switch-to-buffer)
 
 
-;;; Hey, backspace, work right, dammit!
+;; ==  Hey, backspace, work right, dammit!
 (normal-erase-is-backspace-mode 0)
+
+;; == browse on github
+(global-set-key (kbd "C-c o") 'github-browse-file)
+
+;; == gist
 
 ; gist private/public
 (setq gist-view-gist t)
 (global-set-key (kbd "C-c g r") 'gist-region-or-buffer-private)
 (global-set-key (kbd "C-c g u") 'gist-region-or-buffer)
 
-;;; auto-complete-mode
+;; == auto-complete-mode
 (auto-complete)
 (auto-complete-mode)
 
@@ -134,7 +142,7 @@
                        ))
 (real-global-auto-complete-mode t)
 
-; multi-term
+;; == multi-term
 (global-unset-key (kbd "C-x m"))
 (define-key global-map (kbd "C-x m") 'multi-term)
 (add-hook 'term-mode-hook 'linum-mode-off)
@@ -143,7 +151,7 @@
   (interactive)
   (linum-mode 0))
 
-;;; ruby
+;; == ruby
 
 (add-hook 'ruby-mode-hook 'auto-complete-mode)
 (add-hook 'ruby-mode-hook 'robe-mode)

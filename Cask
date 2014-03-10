@@ -16,3 +16,5 @@
 (depends-on "projectile")
 (depends-on "robe")
 (depends-on "zenburn-theme")
+(depends-on "cucumber.el")
+(depends-on "github-browse-file")
