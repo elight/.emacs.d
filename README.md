@@ -6,7 +6,7 @@ With some additions from [Setting up Emacs as Ruby development environment on OS
 
 And a few pieces stolen directly and indirectly from [Ryan Davis](https://github.com/zenspider)
 
-And a few small tweaks of my own
+And mostly rewritten by me at this point. ;-)
 
 # Prerequisites
 ## Emacs (duh)
