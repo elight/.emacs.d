@@ -3,6 +3,8 @@ projectile.cache
 *\~
 .cask/*
 auto-save-list
-projectile-bookmarks.eld
+projectile-bookmarks*
+ac-comphist*
+projectile\ *
 /var
 .#*
